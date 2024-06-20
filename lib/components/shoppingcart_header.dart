@@ -69,7 +69,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
         children: [
           _buildHeaderSelectorButton(0, Icons.directions_bike),
           _buildHeaderSelectorButton(1, Icons.motorcycle),
-          _buildHeaderSelectorButton(2, CupertinoIcons.car_detailed),
+          _buildHeaderSelectorButton(2, CupertinoIcons.person_badge_plus),
           _buildHeaderSelectorButton(3, CupertinoIcons.airplane),
         ],
       ),
@@ -144,22 +144,12 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
   }
 
   Widget _buildDetailColorOptions() {
-    return Padding(
+    return const Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text("Color Options"),
-          const SizedBox(height: 10),
-          Row(
-            children: [
-              _buildDetailIcon(Colors.black),
-              _buildDetailIcon(Colors.green),
-              _buildDetailIcon(Colors.orange),
-              _buildDetailIcon(Colors.grey),
-              _buildDetailIcon(Colors.white),
-            ],
-          ),
+          const Text("에스파는 신이야 "),
         ],
       ),
     );
@@ -225,7 +215,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
           ),
         ),
         child: const Text(
-          "Add to Cart",
+          "후원하기",
           style: TextStyle(color: Colors.white),
         ),
       ),
