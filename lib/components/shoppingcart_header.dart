@@ -121,18 +121,21 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
   }
 
   Widget _buildDetailRatingAndReviewCount() {
-    return const Padding(
-      padding: EdgeInsets.only(bottom: 20),
+    const int maxStars = 3; // Number of total stars
+    const int reviewCount = 26; // Example review count
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
       child: Row(
         children: [
-          Icon(Icons.star, color: Colors.yellow),
-          Icon(Icons.star, color: Colors.yellow),
-          Icon(Icons.star, color: Colors.yellow),
-          Icon(Icons.star, color: Colors.yellow),
-          Icon(Icons.star, color: Colors.yellow),
-          Spacer(),
-          Text("review "),
-          Text("(26)", style: TextStyle(color: Colors.blue)),
+          // Generate star icons in a loop
+          for (int i = 0; i < maxStars; i++)
+            const Icon(Icons.star, color: Colors.yellow),
+          for (int i = 0; i < 5 - maxStars; i++)
+            const Icon(Icons.star, color: Colors.grey),
+
+          const Spacer(),
+          const Text("review "),
+          const Text("($reviewCount)", style: TextStyle(color: Colors.blue)),
         ],
       ),
     );
