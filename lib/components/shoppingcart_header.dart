@@ -4,7 +4,7 @@ import 'package:flutter_application_1/components/value.dart';
 import 'package:flutter_application_1/constants.dart';
 
 class ShoppingCartHeader extends StatefulWidget {
-  const ShoppingCartHeader({Key? key}) : super(key: key);
+  const ShoppingCartHeader({super.key});
   @override
   State<ShoppingCartHeader> createState() => _ShoppingCartHeaderState();
 }
@@ -100,7 +100,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             "Urban Soft AL 10.0",
             style: TextStyle(
               fontSize: 18,
@@ -110,7 +110,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
           // Use shoppingCartHeader.selectedId to get the selectedId
           Text(
             valuesList[selectedId].price,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -121,8 +121,8 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
   }
 
   Widget _buildDetailRatingAndReviewCount() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
+    return const Padding(
+      padding: EdgeInsets.only(bottom: 20),
       child: Row(
         children: [
           Icon(Icons.star, color: Colors.yellow),
@@ -144,8 +144,8 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Color Options"),
-          SizedBox(height: 10),
+          const Text("Color Options"),
+          const SizedBox(height: 10),
           Row(
             children: [
               _buildDetailIcon(Colors.black),
@@ -197,13 +197,13 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
           showCupertinoDialog(
             context: context,
             builder: (context) => CupertinoAlertDialog(
-              title: Text("장바구니에 담으시겠습니까?"),
+              title: const Text("장바구니에 담으시겠습니까?"),
               actions: [
                 CupertinoDialogAction(
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text(
+                  child: const Text(
                     "확인",
                     style: TextStyle(color: Colors.blue),
                   ),
@@ -214,12 +214,12 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
         },
         style: TextButton.styleFrom(
           backgroundColor: kAccentColor,
-          minimumSize: Size(300, 50),
+          minimumSize: const Size(300, 50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
         ),
-        child: Text(
+        child: const Text(
           "Add to Cart",
           style: TextStyle(color: Colors.white),
         ),
