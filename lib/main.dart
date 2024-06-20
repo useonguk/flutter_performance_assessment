@@ -25,8 +25,8 @@ class ShoppingCartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildShoppingCartAppBar(),
-      body: SingleChildScrollView(
-        child: const Column(
+      body: const SingleChildScrollView(
+        child: Column(
           children: [
             ShoppingCartHeader(),
           ],
@@ -37,16 +37,17 @@ class ShoppingCartPage extends StatelessWidget {
 
   AppBar _buildShoppingCartAppBar() {
     return AppBar(
+      title: const Text("에스파 소개페이지"),
       leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back),
         onPressed: () {},
       ),
       actions: [
         IconButton(
-          icon: Icon(Icons.shopping_cart),
+          icon: const Icon(Icons.shopping_cart),
           onPressed: () {},
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
       ],
       elevation: 0.0,
     );
