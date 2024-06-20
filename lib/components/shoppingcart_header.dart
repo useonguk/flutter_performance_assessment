@@ -109,8 +109,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
           ),
           // Use shoppingCartHeader.selectedId to get the selectedId
           Text(
-            "나이 : " + 
-            valuesList[selectedId].age,
+            "나이 : ${valuesList[selectedId].age}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
