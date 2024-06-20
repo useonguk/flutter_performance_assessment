@@ -36,7 +36,8 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildDetailNameAndPrice(),
-                _buildDetailRatingAndReviewCount(),
+                _buildDetailRatingAndReviewCount(
+                    valuesList[selectedId].star, valuesList[selectedId].review),
                 _buildDetailColorOptions(),
                 _buildDetailButton(context),
               ],
@@ -120,9 +121,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
     );
   }
 
-  Widget _buildDetailRatingAndReviewCount() {
-    const int maxStars = 3; // Number of total stars
-    const int reviewCount = 26; // Example review count
+  Widget _buildDetailRatingAndReviewCount(int maxStars, int review) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: Row(
@@ -135,7 +134,10 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
 
           const Spacer(),
           const Text("review "),
-          const Text("($reviewCount)", style: TextStyle(color: Colors.blue)),
+          Text("($review)",
+              style: const TextStyle(
+                color: Colors.blue,
+              )),
         ],
       ),
     );
