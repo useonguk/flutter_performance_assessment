@@ -1,18 +1,30 @@
 class Values {
-  final String price;
+  final String name;
+  final String age;
 
   Values({
-    required this.price,
+    required this.age,
+    required this.name,
   });
 }
 
 // 샘플 데이터
 List<Values> valuesList = [
   Values(
-    price: "6,990₩"
+    name: "카리나",
+    age: "24"
   ),
   Values(
-    price: "140₩"
+    name: "윈터",
+    age: "23"
+  ),
+  Values(
+    name:"지젤",
+    age: "23"
+  ),
+  Values(
+    name: "닝닝",
+    age: "21"
   ),
 ];
 

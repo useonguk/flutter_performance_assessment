@@ -100,16 +100,17 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
-            "Urban Soft AL 10.0",
-            style: TextStyle(
+          Text(
+            valuesList[selectedId].name,
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
           // Use shoppingCartHeader.selectedId to get the selectedId
           Text(
-            valuesList[selectedId].price,
+            "나이 : " + 
+            valuesList[selectedId].age,
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
